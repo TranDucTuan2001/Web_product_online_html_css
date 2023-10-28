@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- lien ket bs4 css -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="bai2.css">
+</head>
+
+<body>
+    <!-- code thành -->
+    <header>
+        <a href="#" class="logo">Zing<span>.</span></a>
+        <ul class="navigation">
+            <li class="fix"><a href="#banner">Home</a></li>
+            <li class="fix"><a href="#about">About us</a></li>
+            <li class="fix"><a href="#products">Products</a></li>
+            <li class="fix"><a href="#tetstimonial">Testimonial</a></li>
+
+
+        </ul>
+
+        <div class="button">
+            <a href="#Contact">Contact</a>
+
+
+
+            <button type="button" class="buy" data-toggle="modal" data-target="#myModal">
+                Buy online
+            </button>
+        </div>
+<!-- fix thanh -->
+        <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+
+                    <div class="modal-body">
+                        <div id="main">
+
+
+                            <!-- Sign In -->
+                            <form action="" id="form-2" class="form">
+                                <h1 class="form-heading">Sign<span>In</span></h1>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="email-login">Email:</label>
+                                    <input type="email" name="email" id="email-login" class="form-input"
+                                        placeholder="email@domain.com" required />
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-label" for="password-login">Password:</label>
+                                    <input type="password" name="password" id="password-login" class="form-input"
+                                        placeholder="••••••••••••" required />
+                                </div>
+
+                                <button type="submit" value="submit" id="btn-login" class="btn">Login</button>
+                            </form>
+
+
+                            <!-- Message -->
+                            <div id="message-container"></div>
+
+                            <!-- Loader -->
+                            <div class="loader">
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                                <div class="circle"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">
+                            Sign Up
+                        </button>
+                        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                            aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+
+                                    <div class="modal-body">
+                                        <!-- Sign Up -->
+                                        <form action="" id="form-1" class="form">
+                                            <h1 class="form-heading">Sign<span>Up</span></h1>
+
+                                            <div class="form-group">
+                                                <label class="form-label" for="fullName-register">Full name:</label>
+                                                <input type="text" name="fullName" id="fullName-register"
+                                                    class="form-input" placeholder="User name" required />
+                                            </div>
+
+                                            <div class="form-group">
+                                                <label class="form-label" for="email-register">Email:</label>
+                                                <input type="email" name="email" id="email-register" class="form-input"
+                                                    placeholder="example@domain.com" required />
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="form-label" for="password-register">Password:</label>
+                                                <input type="password" name="password" id="password-register"
+                                                    class="form-input" placeholder="••••••••••••" required />
+                                            </div>
+
+                                            <button type="submit" value="submit" id="btn-register"
+                                                class="btn">Register</button>
+                                        </form>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                                        <!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="overlay"></div>
+        </div>
+        </div>
+        </div>
+
+
+    </header>
+    <section class="banner" id="banner">
+        <div class="content">
+            <div id="arrow">
+            <h2 >Amazing furniture for your home</h2>
+            <p class="we">
+                We think the chair is the most important piece of furniture in your
+                home.Because if you love the chair you are sitting in chances are you
+                will love the rest of the room
+            </p>
+            <!-- <a href="#" class="btn">Our Menu</a> -->
+        </div>
+        </div>
+        <input type="text" id="myInput" onkeyup="myFunction() " placeholder="Search Your Product" class="glass" >
+
+        <img class="banner-image" src="./banner.png" alt="" />
+    </section>
+    <script type="text/javascript">
+        window.addEventListener('scroll', function () {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
+    <!-- code tuấn -->
+    <div class="container my-container" id="about">
+        <div class="row my-row1 mt-5">
+            <div class="col-4 ">
+                <h1 class="ab font-weight-bold  ">About us</h1>
+                <p class="cm text-justify ">
+                    Comfort is key and how you feel about your chair
+                    will affect how you feel and your mood.
+            </div>
+            <div class="col-4"></div>
+            <div class="col-4"></div>
+        </div>
+        <div class="row my-row">
+            <div class="col-6 ">
+                <div class="row my-row4 ">
+                    <div class="col-6 col-white ">
+                        <h1 class="one font-weight-bold">
+                            1
+                        </h1>
+                        <h5 class="font-weight-bold">Mission</h5>
+                        <p class="tt">
+                            It makes people at ease and feel like they want to open up.
+                        </p>
+                    </div>
+                    <div class="col-6 col-white">
+                        <h1 class="one font-weight-bold">
+                            2
+                        </h1>
+                        <h5 class="font-weight-bold">Motivation</h5>
+
+                        <p class="tt">
+                            The perfect mix of art that complements the room's style.
+                        </p>
+                    </div>
+                </div>
+                <div class="row my-row4 ">
+                    <div class="col-6 col-white ">
+                        <h1 class="one font-weight-bold">
+                            3
+                        </h1>
+                        <h5 class="font-weight-bold">Vision</h5>
+                        <p class="tt">
+                            Along with a healthy dose of negative space to give the eyes spots to rest.
+                        </p>
+                    </div>
+                    <div class="col-6 col-white">
+                        <h1 class="one font-weight-bold">
+                            4
+                        </h1>
+                        <h5 class="font-weight-bold">Goal</h5>
+                        <p class="tt">
+                            Art that has meaning to the people who live in the space,
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 col-green">
+                <div class="row my-row7 ">
+                    <div class="col-6 col-white ">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="img/Rectangle 5.png" alt="">
+                    </div>
+                    <div class="col-6 col-white">
+                        <img src="img/img9.jpg" alt="">
+                    </div>
+                </div>
+                <div class="row my-row6 ">
+                    <div class=" col-6 col-white ">
+                        <br>
+                        <br>
+                        <br>
+                        <img src="img/Rectangle 8.png" alt="">
+                    </div>
+                    <div class="col-6 col-white">
+                        <img src="img/Rectangle 7.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row my-row1 mt-5 ">
+                    <div class="col-12">
+                        <h1 class="ab text-center font-weight-bold">Products</h1>
+                        <div class="menuu">
+                            <ul>
+                                <li><a class="all font-weight-bold" href="#">All</a></li>
+                                <li><a href="#">Chair</a></li>
+                                <li><a href="#">Bed</a></li>
+                                <li><a href="#">Closet</a></li>
+                                <li><a href="#">Sofa</a></li>
+                                <li><a href="#">Cabinet</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="wrapper" id="products">
+                    
+                    <ul class="products">
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Stool.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Stool</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$200</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Tea table (1).png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Tea Table</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$150</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Sofa white.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Sofa Light</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$300</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Sofa black.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Sofa Dark</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$300</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Table lamp.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Table Lamp</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$50</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Chair.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Chair</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$200</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Bedside table.png" alt="">
+                                    </a>
+            
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Beside Table</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$100</div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="product-item">
+                                <div class="product-top">
+                                    <a href="" class="product-thumb">
+                                        <img src="img/Chair 2.png" alt="">
+                                    </a>
+                                    <a href="" class="buy-now">Mua Ngay</a>
+                                </div>
+                                <div class="product-info">
+                                    <a href="" class="product-cat">Light Chair</a>
+                                    <a href="" class="product-name"> Price</a>
+                                    <div class="product-price">$800</div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+            
+                </div>
+            </div>
+        </div>
+        <!-- code tú -->
+    </div>
+    <div class="container-main">
+        <h1 class="title">What do customers say... </h1>
+
+
+        <div class="left" id="tetstimonial">
+            <div class="min">
+            </div>
+            <div class="max item-img">
+                <img src="Image.png" alt="" class="img">
+            </div>
+            <div class="max item-star">
+                <img src="Star 1.png" alt="" class="star">
+            </div>
+        </div>
+
+
+        <div class="right">
+            <div class="text">
+                <div class="top">
+                    <img src="quote (2).png" alt="" class="quote">
+                </div>
+
+
+                <div class="bot">
+                    <h4 class="amazing">Amazing service</h4>
+                    <p class="p">Since the online marketplace can be a scary place, the presence of customer reviews on
+                        an online store helps establish authenticity, confidence, and trust among shoppers. </p>
+                    <p class="orange">Wade Warren</p>
+                    <p class="doctor">Doctor</p>
+
+                </div>
+            <a href="">   <img src="arrow-circle-left.png" alt="" class="item-left"></a> 
+                <a href=""><img src="arrow-circle-right.png" alt="" class="item-right"></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ShopLogin -->
+    <div class="container-shop" id="Contact">
+
+        <div class="menu">
+            <div class="room">
+
+                <div class="sofa">
+                    <img src="Rectangle 5.png" alt="" class="rectangle5">
+                    <img src="Rectangle 8.png" alt="" class="rectangle8">
+                </div>
+
+
+                <div class="lanemid"></div>
+
+
+                <div class="painting">
+                    <img src="Rectangle 6.png" alt="" class="rectangle6">
+                    <img src="Rectangle 7.png" alt="" class="rectangle7">
+                </div>
+            </div>
+
+
+
+
+            <div class="login">
+                <div class="avata">
+                    <div>
+                        <h1 class="contact"> Contact us</h1>
+                        <p class="fromyou">Our team would love to hear from you!</p>
+                    </div>
+                    <div class="name">
+                        <div class="box">
+                            <div class="firstname">
+                                <input type="text" class="input" placeholder="Firstname">
+                            </div>
+                            <div class="lastname">
+                                <input type="text" class="input" placeholder="Lastname">
+                            </div>
+                        </div>
+
+                        <div class="email">
+                            <input type="text" class="input" placeholder="Email address ">
+                        </div>
+
+
+                        <div class="messagee">
+                            <input type="text" class="big" placeholder="Message " class="place">
+                        </div>
+
+
+                        <div class="send">
+                            <button type="submit" id="send" class="sendmid">Send Message</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="link">
+        <div class="zing">
+            <h4 class="h4">Zing<span class="on">.</span></h4>
+            <br>
+            <p class="sir">4517 Washington Ave. Manchester, Kentucky 39495</p>
+
+        </div>
+
+
+        <div class="quick">
+            <h4 class="h4">Quick links</h4>
+            <br>
+
+            <a href="" class="sir">Gallery</a>
+            <br>
+            <br>
+            <a href="" class="sir">About us</a>
+            <br>
+            <br>
+            <a href="" class="sir"> Buy online</a>
+        </div>
+        <div class="policy">
+            <h4 class="h4"> Policy</h4>
+            <br>
+            <a href="" class="sir">Terms & conditions</a>
+            <br>
+            <br>
+            <a href="" class="sir">Privacy policy</a>
+        </div>
+        <div class="social">
+            <h4 class="h4">Social</h4>
+            <br>
+            <a href="" class="sir">Facebook</a>
+            <br>
+            <br>
+            <a href="" class="sir">Instagram</a>
+            <br>
+            <br>
+            <a href="" class="sir">LinkedIN</a>
+        </div>
+
+        <p class="end">Copyright ©2022 Zing Inc. All right reserved.</p>
+    </div>
+    <!-- lien ket js -->
+    <script src="./index.js"></script>
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
